@@ -1,0 +1,21 @@
+{% extends '_templates/base.njk' %}
+
+{% block content %}
+<article class="container">
+  <h1>Albums of Queen</h1>
+  <p>Queen has made many albums over the years, from their very first self-titled album in 1973 to Made in Heaven in 1995. Check em out!</p>
+  <div class="row">
+    {% for album in queen.discography %}
+    <div class="col-sm-6 col-lg-4">
+      <div class="card mb-4">
+        <div class="card-body">
+          <img src="../img/discs/{{ album.image }}" class="card-img-top mb-2" alt="...">
+          <h5 class="card-title">{{ album.title }}</h5>
+          <h6 class="card-text">{{ album.year }}</h6>
+        </div>
+      </div>
+    </div>
+  {% endfor %}
+</div>
+</article>
+{% endblock %}

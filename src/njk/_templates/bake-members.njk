@@ -1,0 +1,23 @@
+{% extends '_templates/base.njk' %}
+{% set relative_path = "../" %}
+
+{% block page_title %}{{ headline }}{% endblock %}
+
+{% block page_description %}{{ headline }} by Capt. Crit McGillicutty{% endblock %}
+
+{% block content %}
+  <article class="container">
+    <div class="row">
+      <div class="col-sm-4">
+        <img src="../img/members/{{ imagebw }}" alt="..." class="img-fluid">
+      </div>
+      <div class="col-sm-8">
+        <h1>{{ name }} {{ tenure }}</h1>
+        <h6>Birthdate: {{ birthdate }}</h6>
+        <h6>Birthplace: {{ birthplace }}</h6>
+        <h6>Instruments: {{ instruments}}</h6>
+        <p>{{ description | safe }}</p>
+      </div>
+    </div>
+  </article>
+{% endblock %}
