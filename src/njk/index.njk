@@ -5,23 +5,23 @@
 {% block content %}
 <div class="container">
   <div class="row">
-    <div class="col-md-8 offset-md-2">
+    <div class="col-md-8">
       <h1>Welcome...to Queen</h1>
       <p>Hempen halter mizzenmast deadlights gaff pillage starboard jack lee Blimey draught. Man-of-war piracy black jack sutler Yellow Jack keel provost overhaul execution dock rigging. Log quarterdeck dead men tell no tales red ensign gibbet grog blossom bilge Nelsons folly code of conduct gunwalls.</p>
     </div>
   </div>
   <div class="row">
     {% for members in queen.members %}
-    <div class="col-md-8 offset-md-2 col-sm-6 col-lg-4">
-    <div class="card text-white bg-dark border-primary mb-4">
-      <div class="card-body">
-        <img src="../img/members/{{ members.image }}" class="card-img-top mb-2" alt="...">
-        <h5 class="card-title">{{ members.name }}</h5>
-        <a href="bios/{{ members.slug }}.html">Click here for full bio</a>
+    <div class="col-md-6 col-lg-3">
+      <div class="card text-white bg-dark border-primary mb-4">
+        <div class="card-body">
+          <img src="img/members/{{ members.image }}" class="card-img-top mb-2" alt="...">
+          <h5 class="card-title">{{ members.name }}</h5>
+          <a href="bios/{{ members.slug }}.html">Click here for full bio</a>
+        </div>
       </div>
     </div>
-  </div>
-  {% endfor %}
+    {% endfor %}
   </div>
 </div>
 {% endblock %}
