@@ -9,6 +9,7 @@
 /* bootstrap */
 // Option A: Include all of Bootstrap
 @import "../../node_modules/bootstrap/scss/bootstrap";
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap');
 
 // Option B: Include parts of Bootstrap
 // See https://getbootstrap.com/docs/4.1/getting-started/theming/#importing
@@ -24,4 +25,8 @@
 
 h3 {
   font-size: 1.5rem;
+}
+
+.row {
+  font-family: 'EB Garamond', serif;
 }
